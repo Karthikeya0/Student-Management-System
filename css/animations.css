@@ -1,0 +1,36 @@
+/* ============================================
+   ANIMATIONS — Minimal, purposeful
+   ============================================ */
+
+/* Confetti piece */
+.confetti-piece {
+  position: absolute;
+  top: -10px;
+  animation: confettiFall linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg);     opacity: 0.9; }
+  80%  { opacity: 0.7; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+
+/* Fade in scale — used by winner banner */
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Bounce in */
+@keyframes bounceIn {
+  0%   { transform: scale(0.5); opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 1; }
+}

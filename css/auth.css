@@ -1,0 +1,138 @@
+/* ============================================
+   AUTH — Login & Register Pages
+   ============================================ */
+
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 48px);
+  padding: var(--s6);
+}
+
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 860px;
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  background: var(--bg-2);
+}
+
+/* Left panel */
+.auth-hero {
+  background: var(--bg-3);
+  padding: var(--s8) var(--s6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border-1);
+}
+
+.auth-hero-content {
+  max-width: 300px;
+}
+
+.auth-hero-icon {
+  font-size: 2rem;
+  margin-bottom: var(--s4);
+  opacity: 0.7;
+}
+
+.auth-hero h1 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-0);
+  margin-bottom: var(--s3);
+}
+
+.auth-hero p {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+  line-height: 1.6;
+  margin-bottom: var(--s5);
+}
+
+.auth-hero-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.auth-hero-features li {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.auth-hero-features li::before {
+  content: '—';
+  color: var(--text-4);
+  font-size: var(--text-xs);
+}
+
+/* Right panel — form */
+.auth-form-container {
+  padding: var(--s6) var(--s6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form-header {
+  margin-bottom: var(--s5);
+}
+
+.auth-form-header h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+
+.auth-form-header p {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-form .btn-primary {
+  margin-top: var(--s2);
+}
+
+.auth-switch {
+  margin-top: var(--s5);
+  font-size: var(--text-sm);
+  color: var(--text-3);
+}
+
+.auth-switch a {
+  color: var(--text-1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+
+  .auth-hero {
+    display: none;
+  }
+}

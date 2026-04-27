@@ -1,0 +1,75 @@
+/* ============================================
+   DASHBOARD — Admin & Voter Dashboards
+   ============================================ */
+
+/* Stat card color dots (keep subtle) */
+.stat-card-icon.green  { color: var(--green); }
+.stat-card-icon.blue   { color: var(--blue); }
+.stat-card-icon.purple { color: var(--text-2); }
+.stat-card-icon.amber  { color: var(--amber); }
+
+/* ── Hover lift on stat cards ── */
+.stat-card {
+  transition: border-color var(--t-base), transform var(--t-base);
+}
+
+.stat-card:hover {
+  border-color: var(--border-2);
+  transform: translateY(-1px);
+}
+
+/* ── History timeline ── */
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t-fast);
+}
+
+.history-item:hover {
+  border-color: var(--border-2);
+}
+
+.history-item-icon {
+  font-size: 1rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.history-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-item-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-0);
+  margin-bottom: 2px;
+}
+
+.history-item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+  font-size: var(--text-xs);
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+
+.history-item-receipt {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-3);
+  margin-top: 3px;
+}

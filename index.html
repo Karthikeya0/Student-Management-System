@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Voting System — Secure & Transparent</title>
+  <meta name="description" content="A secure, transparent, and efficient online voting system. Register, vote, and view real-time election results." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/voting.css" />
+  <link rel="stylesheet" href="css/results.css" />
+</head>
+<body>
+
+  <!-- ── Top Navigation Bar ── -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-brand">
+      <span class="navbar-logo">🗳️</span>
+      <span class="navbar-title">VoteSecure</span>
+    </div>
+    <div class="navbar-actions" id="navbar-actions">
+      <!-- filled by router -->
+    </div>
+  </nav>
+
+  <!-- ── Main Content (SPA root) ── -->
+  <main id="main-content" class="main-content">
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading…</p>
+    </div>
+  </main>
+
+  <!-- ── Toast Container ── -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ── Entry Point ── -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

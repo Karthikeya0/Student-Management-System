@@ -1,0 +1,174 @@
+/* ============================================
+   DESIGN TOKENS — Minimal B&W Dark Mode
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ── Core Palette (B&W Dark) ── */
+  --bg-0:       #000000;
+  --bg-1:       #0a0a0a;
+  --bg-2:       #111111;
+  --bg-3:       #1a1a1a;
+  --bg-4:       #242424;
+  --bg-5:       #2e2e2e;
+
+  --border-1:   rgba(255, 255, 255, 0.06);
+  --border-2:   rgba(255, 255, 255, 0.10);
+  --border-3:   rgba(255, 255, 255, 0.18);
+  --border-focus: rgba(255, 255, 255, 0.5);
+
+  /* Text */
+  --text-0:     #ffffff;
+  --text-1:     #e4e4e4;
+  --text-2:     #a0a0a0;
+  --text-3:     #666666;
+  --text-4:     #404040;
+
+  /* Accent — single white glow, no rainbow */
+  --accent:       #ffffff;
+  --accent-dim:   rgba(255, 255, 255, 0.08);
+  --accent-hover: rgba(255, 255, 255, 0.12);
+
+  /* Status (muted, not neon) */
+  --green:        #22c55e;
+  --green-dim:    rgba(34, 197, 94, 0.10);
+  --amber:        #f59e0b;
+  --amber-dim:    rgba(245, 158, 11, 0.10);
+  --red:          #ef4444;
+  --red-dim:      rgba(239, 68, 68, 0.10);
+  --blue:         #60a5fa;
+  --blue-dim:     rgba(96, 165, 250, 0.10);
+
+  /* ── Typography ── */
+  --font:      'Articulat CF', 'Articulat', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Code', monospace;
+
+  /* Sizes */
+  --text-xs:   0.70rem;
+  --text-sm:   0.813rem;
+  --text-base: 0.938rem;
+  --text-md:   1.063rem;
+  --text-lg:   1.188rem;
+  --text-xl:   1.375rem;
+  --text-2xl:  1.625rem;
+  --text-3xl:  2rem;
+  --text-4xl:  2.5rem;
+
+  /* ── Spacing (tight) ── */
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s8: 2rem;
+  --s10: 2.5rem;
+  --s12: 3rem;
+
+  /* ── Radius ── */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 8px;
+  --r-xl: 12px;
+  --r-full: 999px;
+
+  /* ── Shadow ── */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.6);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.7);
+
+  /* ── Transition ── */
+  --t-fast: 120ms ease;
+  --t-base: 200ms ease;
+  --t-slow: 350ms ease;
+
+  /* ── Z ── */
+  --z-nav:    100;
+  --z-modal:  1000;
+  --z-toast:  2000;
+
+  /* Backward compat aliases used in existing JS-injected HTML */
+  --bg-primary:    var(--bg-0);
+  --bg-secondary:  var(--bg-1);
+  --bg-tertiary:   var(--bg-2);
+  --bg-card:       var(--bg-2);
+  --bg-glass:      var(--bg-2);
+  --bg-glass-hover:var(--bg-3);
+  --bg-input:      var(--bg-3);
+
+  --border-color:  var(--border-1);
+  --border-hover:  var(--border-2);
+  --border-focus:  var(--border-focus);
+
+  --accent-blue:      var(--blue);
+  --accent-blue-hover: #3b82f6;
+  --accent-blue-glow: transparent;
+  --accent-purple:    var(--text-2);
+  --accent-purple-hover: var(--text-1);
+  --accent-purple-glow: transparent;
+  --accent-green:     var(--green);
+  --accent-green-hover:#16a34a;
+  --accent-green-glow: transparent;
+  --accent-red:       var(--red);
+  --accent-red-hover: #dc2626;
+  --accent-red-glow:  transparent;
+  --accent-amber:     var(--amber);
+  --accent-amber-hover:#d97706;
+  --accent-amber-glow: transparent;
+  --accent-cyan:      var(--blue);
+  --accent-pink:      var(--text-2);
+
+  --text-primary:   var(--text-0);
+  --text-secondary: var(--text-2);
+  --text-muted:     var(--text-3);
+  --text-inverse:   #000000;
+
+  --gradient-hero:  none;
+  --gradient-blue:  none;
+  --gradient-green: none;
+  --gradient-mesh:  none;
+  --glass-blur:     none;
+  --glass-border:   1px solid var(--border-1);
+
+  --transition-fast:   var(--t-fast);
+  --transition-base:   var(--t-base);
+  --transition-slow:   var(--t-slow);
+  --transition-spring: 300ms ease;
+
+  --font-heading: var(--font);
+  --font-body:    var(--font);
+  --font-mono:    var(--font-mono);
+
+  --space-1:  var(--s1);
+  --space-2:  var(--s2);
+  --space-3:  var(--s3);
+  --space-4:  var(--s4);
+  --space-5:  var(--s5);
+  --space-6:  var(--s6);
+  --space-8:  var(--s8);
+  --space-10: var(--s10);
+  --space-12: var(--s12);
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --radius-sm:  var(--r-sm);
+  --radius-md:  var(--r-md);
+  --radius-lg:  var(--r-lg);
+  --radius-xl:  var(--r-xl);
+  --radius-2xl: 16px;
+  --radius-full:var(--r-full);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: 0 16px 40px rgba(0,0,0,0.8);
+  --shadow-glow-blue:   none;
+  --shadow-glow-purple: none;
+  --shadow-glow-green:  none;
+
+  --z-base:     1;
+  --z-dropdown: var(--z-nav);
+  --z-confetti: 3000;
+}

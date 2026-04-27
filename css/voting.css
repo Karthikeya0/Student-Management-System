@@ -1,0 +1,278 @@
+/* ============================================
+   VOTING — Voting Booth, Receipt, Countdown
+   ============================================ */
+
+.voting-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.voting-header {
+  margin-bottom: var(--s6);
+}
+
+.voting-header h1 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--s2);
+}
+
+.voting-header p {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+}
+
+.voting-instructions {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  padding: var(--s3) var(--s4);
+  background: var(--bg-3);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  margin-bottom: var(--s5);
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  line-height: 1.5;
+}
+
+.voting-instructions-icon {
+  flex-shrink: 0;
+  opacity: 0.5;
+  margin-top: 1px;
+}
+
+/* ── Candidates Grid ── */
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--s3);
+  margin-bottom: var(--s6);
+}
+
+.candidate-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  padding: var(--s5) var(--s4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s2);
+  cursor: pointer;
+  transition: border-color var(--t-base), background var(--t-base);
+  position: relative;
+  text-align: center;
+  user-select: none;
+}
+
+.candidate-card:hover {
+  border-color: var(--border-2);
+  background: var(--bg-3);
+}
+
+.candidate-card.selected {
+  border-color: var(--border-3);
+  background: var(--bg-3);
+}
+
+.candidate-check {
+  position: absolute;
+  top: var(--s2);
+  right: var(--s2);
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: transparent;
+  background: var(--bg-3);
+  transition: all var(--t-fast);
+}
+
+.candidate-card.selected .candidate-check {
+  background: var(--text-0);
+  border-color: var(--text-0);
+  color: var(--bg-0);
+}
+
+.candidate-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: #fff;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.candidate-name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-0);
+  letter-spacing: -0.01em;
+}
+
+.candidate-party {
+  font-size: var(--text-xs);
+  color: var(--text-3);
+}
+
+.candidate-number {
+  font-size: var(--text-xs);
+  color: var(--text-4);
+  font-family: var(--font-mono);
+}
+
+/* ── Vote Action ── */
+.vote-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s5) 0;
+  border-top: 1px solid var(--border-1);
+}
+
+.vote-action p {
+  font-size: var(--text-xs);
+  color: var(--text-4);
+}
+
+/* ── Countdown ── */
+.countdown {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: var(--s2) 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.countdown-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-0);
+  background: var(--bg-3);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-sm);
+  padding: 2px var(--s2);
+  min-width: 38px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.countdown-label {
+  font-size: 9px;
+  color: var(--text-4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Vote Receipt ── */
+.vote-receipt {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: var(--s8) var(--s4);
+  text-align: center;
+}
+
+.vote-receipt-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--s4);
+}
+
+.vote-receipt h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--s2);
+}
+
+.vote-receipt p {
+  font-size: var(--text-sm);
+  color: var(--text-3);
+  margin-bottom: var(--s6);
+}
+
+.receipt-code {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-0);
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-lg);
+  padding: var(--s3) var(--s5);
+  margin: 0 auto var(--s5);
+  display: inline-block;
+}
+
+.receipt-details {
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  margin-bottom: var(--s5);
+  text-align: left;
+}
+
+.receipt-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s3) var(--s4);
+  border-bottom: 1px solid var(--border-1);
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+}
+
+.receipt-row-label {
+  font-size: var(--text-xs);
+  color: var(--text-3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.receipt-row-value {
+  font-size: var(--text-sm);
+  color: var(--text-1);
+  font-weight: 500;
+}
+
+/* ── Already Voted ── */
+.already-voted {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: var(--s8) var(--s4);
+  text-align: center;
+}
+
+.already-voted-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--s4);
+}
+
+.already-voted h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--s2);
+}

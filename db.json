@@ -1,0 +1,184 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_001",
+      "name": "Admin",
+      "email": "admin@voting.com",
+      "voterId": "ADM-001",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "createdAt": "2026-04-26T07:54:17.877Z"
+    },
+    {
+      "id": "usr_voter_001",
+      "name": "Rahul Sharma",
+      "email": "rahul@example.com",
+      "voterId": "VOT-2026-001",
+      "passwordHash": "9e9df699cdbd40591369649a48729c2f6c0aaa45bd0cd37799a997579290be0d",
+      "role": "voter",
+      "createdAt": "2026-04-26T07:54:17.877Z"
+    },
+    {
+      "id": "usr_voter_002",
+      "name": "Priya Patel",
+      "email": "priya@example.com",
+      "voterId": "VOT-2026-002",
+      "passwordHash": "9e9df699cdbd40591369649a48729c2f6c0aaa45bd0cd37799a997579290be0d",
+      "role": "voter",
+      "createdAt": "2026-04-26T07:54:17.877Z"
+    },
+    {
+      "id": "usr_y93b5s2js7ys",
+      "name": "Test User",
+      "email": "test@example.com",
+      "voterId": "VOT-123",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "role": "voter",
+      "createdAt": "2026-04-26T08:13:45.633Z"
+    },
+    {
+      "id": "usr_y124wihqh1jm",
+      "name": "Karthikeya",
+      "email": "karthikeyachowdary353@gmail.com",
+      "voterId": "VOT200611",
+      "passwordHash": "11fc3333dc9eee3351705baadda0c9f04cb3e10d8ebfd00fe0bbccf20785c738",
+      "role": "voter",
+      "createdAt": "2026-04-26T10:16:01.666Z"
+    }
+  ],
+  "elections": [
+    {
+      "id": "elc_001",
+      "title": "Student Council President 2026",
+      "description": "Vote for the next student body president who will lead initiatives for campus improvement, student welfare, and academic excellence.",
+      "candidates": [
+        {
+          "id": "cnd_001",
+          "name": "Ananya Gupta",
+          "party": "Progress Alliance",
+          "votes": 12,
+          "color": "#3b82f6"
+        },
+        {
+          "id": "cnd_002",
+          "name": "Vikram Singh",
+          "party": "Student Unity",
+          "votes": 8,
+          "color": "#8b5cf6"
+        },
+        {
+          "id": "cnd_003",
+          "name": "Meera Joshi",
+          "party": "Innovation Front",
+          "votes": 15,
+          "color": "#10b981"
+        },
+        {
+          "id": "cnd_004",
+          "name": "Arjun Reddy",
+          "party": "Campus First",
+          "votes": 6,
+          "color": "#f59e0b"
+        }
+      ],
+      "status": "completed",
+      "startDate": "2026-04-26T07:54:17.877Z",
+      "endDate": "2026-04-26T10:15:13.274Z",
+      "createdBy": "usr_admin_001",
+      "createdAt": "2026-04-23T07:54:17.877Z"
+    },
+    {
+      "id": "elc_002",
+      "title": "Best Department Award 2026",
+      "description": "Vote for the department that has shown exceptional performance in academics, research, and extracurricular activities.",
+      "candidates": [
+        {
+          "id": "cnd_005",
+          "name": "Computer Science",
+          "party": "Engineering",
+          "votes": 22,
+          "color": "#3b82f6"
+        },
+        {
+          "id": "cnd_006",
+          "name": "Electronics",
+          "party": "Engineering",
+          "votes": 18,
+          "color": "#ec4899"
+        },
+        {
+          "id": "cnd_007",
+          "name": "Mechanical",
+          "party": "Engineering",
+          "votes": 14,
+          "color": "#f59e0b"
+        }
+      ],
+      "status": "completed",
+      "startDate": "2026-04-16T07:54:17.877Z",
+      "endDate": "2026-04-23T07:54:17.877Z",
+      "createdBy": "usr_admin_001",
+      "createdAt": "2026-04-12T07:54:17.877Z"
+    },
+    {
+      "id": "elc_003",
+      "title": "Annual Festival Theme",
+      "description": "Choose the theme for this year's annual cultural festival. The winning theme will set the tone for all events and decorations.",
+      "candidates": [
+        {
+          "id": "cnd_008",
+          "name": "Retro Revival",
+          "party": "Theme",
+          "votes": 1,
+          "color": "#ef4444"
+        },
+        {
+          "id": "cnd_009",
+          "name": "Neon Nights",
+          "party": "Theme",
+          "votes": 0,
+          "color": "#06b6d4"
+        },
+        {
+          "id": "cnd_010",
+          "name": "Enchanted Forest",
+          "party": "Theme",
+          "votes": 0,
+          "color": "#10b981"
+        }
+      ],
+      "status": "active",
+      "startDate": "2026-04-26T10:15:16.750Z",
+      "endDate": "2026-05-08T07:54:17.877Z",
+      "createdBy": "usr_admin_001",
+      "createdAt": "2026-04-26T07:54:17.877Z"
+    }
+  ],
+  "votes": [
+    {
+      "id": "vot_s001",
+      "electionId": "elc_002",
+      "candidateId": "cnd_005",
+      "voterId": "usr_voter_001",
+      "receiptCode": "RCP-AB12-XY34",
+      "timestamp": "2026-04-23T07:54:17.877Z"
+    },
+    {
+      "id": "vot_s002",
+      "electionId": "elc_002",
+      "candidateId": "cnd_006",
+      "voterId": "usr_voter_002",
+      "receiptCode": "RCP-CD56-WZ78",
+      "timestamp": "2026-04-23T07:54:17.877Z"
+    },
+    {
+      "id": "vot_0c6cqap5bmt3",
+      "electionId": "elc_003",
+      "candidateId": "cnd_008",
+      "voterId": "usr_y124wihqh1jm",
+      "receiptCode": "RCP-EMWU-ZSBC",
+      "timestamp": "2026-04-26T10:16:11.121Z"
+    }
+  ],
+  "seeded": true
+}
