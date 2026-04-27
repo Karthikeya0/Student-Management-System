@@ -17,7 +17,15 @@ from flask_sqlalchemy import SQLAlchemy
 
 # ── App Setup ──────────────────────────────────
 app = Flask(__name__, static_folder='.', static_url_path='')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///voting.db'
+
+# On Vercel the filesystem is read-only except /tmp
+import os
+if os.environ.get('VERCEL'):
+    db_path = '/tmp/voting.db'
+else:
+    db_path = os.path.join(os.path.dirname(__file__), 'instance', 'voting.db')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 CORS(app)
 db = SQLAlchemy(app)
